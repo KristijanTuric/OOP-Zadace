@@ -11,7 +11,7 @@ namespace Class_Library
         private double humidity;
 
         // argument constructor
-        public Weather(double temperature, double humidity, double windSpeed)
+        public Weather(double temperature, double windSpeed, double humidity)
         {
             this.temperature = temperature;
             this.windSpeed = windSpeed;
@@ -72,5 +72,9 @@ namespace Class_Library
             return wci;
         }
 
+        public string GetAsString()
+        {
+            return $"T={temperature}°C, w={windSpeed}km/h, h={humidity}%";
+        }
     }
 }
