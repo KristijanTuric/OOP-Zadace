@@ -1,0 +1,90 @@
+[33mcommit dcdec2ef8f7a1bb11a63c129599955e0934e4bae[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Kristijan Turic <kristijanyo@gmail.com>
+Date:   Fri Dec 24 15:44:57 2021 +0100
+
+    Added Weather.cs and WeatherGenerator.cs from DZ3.
+
+[33mcommit ff286af860ba40d656eb972dca404e45b8d62d9d[m
+Author: Kristijan Turic <kristijanyo@gmail.com>
+Date:   Fri Dec 24 15:38:59 2021 +0100
+
+    Initial commit, created the two projects in the solution. Added the test method in the ConsoleUI in Program.cs, added DailyForecastRepository.cs in the Class Library.
+
+[33mcommit 7a682c32abe59d0ddb030a1cf1a839f8e3199592[m
+Author: Kristijan Turic <kristijanyo@gmail.com>
+Date:   Tue Dec 14 20:13:12 2021 +0100
+
+    Finished DZ3, copied Weather.cs from before, added all the funcionality to the classes, ForecastUtilties has only one function, was not copied from before; Printer.cs only has printing functionality while the rest is in WeatherGenerator.cs, Program.cs only has the Demo function.
+
+[33mcommit 75b2b89c86cd552326c5718d762ef4b5e08469cc[m
+Author: Kristijan Turic <kristijanyo@gmail.com>
+Date:   Mon Nov 29 19:13:02 2021 +0100
+
+    Finished dz2, added all funcionality to the libraries and the static library, copied the Weather class from dz1 and made minimal changes to suit dz2 better, changed names of some classes in the RunDemoHW2() to fit my names.
+
+[33mcommit 6bee1fa64675ea70d2db780ecab06a2cad1a21a7[m
+Author: Kristijan Turic <kristijanyo@gmail.com>
+Date:   Mon Nov 29 18:03:41 2021 +0100
+
+    Added starting projects and libraries
+
+[33mcommit 9fddce6c19d182495b97c341fd03928476de92cd[m
+Author: Kristijan Turic <kristijanyo@gmail.com>
+Date:   Wed Oct 27 23:10:05 2021 +0200
+
+    Finished the program, added all the functions to the library, in the ui project added the test method.
+
+[33mcommit 714411df15f96d48efe0e8682d84c506c0c5b551[m
+Author: Kristijan Turic <kristijanyo@gmail.com>
+Date:   Mon Oct 25 21:18:19 2021 +0200
+
+    Initial solution made with 2 starting projects. One for the UI and one for the logic.
+
+[33mcommit cbb5561b82d99300fcfdb5671daef26ebe7fa10f[m
+Author: Kristijan Turic <kristijanyo@gmail.com>
+Date:   Mon Oct 25 20:36:22 2021 +0200
+
+    Initial commit. Added main.cs file
+
+[33mcommit 74b87341bc2cd0fdf367f25d282b05c6a73ce8bd[m
+Author: Bruno <bruno.ferit@gmail.com>
+Date:   Fri Oct 15 12:13:39 2021 +0200
+
+    Revised Readme.md with new references
+
+[33mcommit 516107350fd348fff8e6a06a90b5f142378a97ad[m
+Merge: 6f1cfb3 ede2cbc
+Author: Bruno <bruno.zoric@ferit.hr>
+Date:   Sun Oct 25 07:25:15 2020 +0100
+
+    Merge branch 'main' of https://github.com/zoricbruno/oop_ferit_zadace into main
+
+[33mcommit 6f1cfb325c81585409d35bcabd5ddbe783182117[m
+Author: Bruno <bruno.zoric@ferit.hr>
+Date:   Sun Oct 25 07:16:54 2020 +0100
+
+    Refactored inistructions for copying the original project
+
+[33mcommit ede2cbc2989fba5b34041b5daf4d469b6f103f3b[m
+Author: Bruno <bruno.zoric@ferit.hr>
+Date:   Sun Oct 25 07:16:54 2020 +0100
+
+    Refactored inistructions for copying the original project
+
+[33mcommit 0d1863dec1748e36aae314e9e4d0e8239011ce55[m
+Author: Bruno <bruno.zoric@ferit.hr>
+Date:   Fri Oct 16 20:12:56 2020 +0200
+
+    fixed link for forks
+
+[33mcommit b1660352c02c1cf93f462964317e525bc6dea37c[m
+Author: Bruno <bruno.zoric@ferit.hr>
+Date:   Mon Oct 12 10:14:20 2020 +0200
+
+    Added directory structure. Updated readme.md with info regarding submissions
+
+[33mcommit ecee0c05f017c23a68d1e868eaaa456cb487d6f1[m
+Author: Bruno Zorić <10668504+zoricbruno@users.noreply.github.com>
+Date:   Mon Oct 12 10:05:51 2020 +0200
+
+    Initial commit
