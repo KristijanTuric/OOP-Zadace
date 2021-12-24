@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.32002.261
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUI", "ConsoleUI\ConsoleUI.csproj", "{26618D3C-EFEA-4236-8C1E-8493F0FF2036}"
+	ProjectSection(ProjectDependencies) = postProject
+		{23C0F3F0-169D-411B-8CC4-1691A1BE0457} = {23C0F3F0-169D-411B-8CC4-1691A1BE0457}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Class Library", "Class Library\Class Library.csproj", "{23C0F3F0-169D-411B-8CC4-1691A1BE0457}"
 EndProject

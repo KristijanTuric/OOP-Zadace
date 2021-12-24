@@ -1,12 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Collections;
+using System.Globalization;
 namespace Class_Library
 {
-    public class DailyForecastRepository
+    public class DailyForecastRepository : IEnumerable
     {
         private List<DailyForecast> dailyForecasts = new List<DailyForecast>();
         public DailyForecastRepository() {}
+        public DailyForecastRepository(DailyForecastRepository forecastRepository)
+        {
+            for(int i = 0; i < forecastRepository.dailyForecasts.Count; i++)
+            {
+                dailyForecasts.Add(forecastRepository.dailyForecasts[i]);
+            }
+        }
 
 
         // dodajemo nove dnevne prognoze, ako za neki dan vec imamo prognozu i pokusamo dodati novi prognozu na taj isti dan
@@ -25,6 +33,19 @@ namespace Class_Library
             if(flag == 0)
             {
                 dailyForecasts.Add(dailyForecast);
+                DailyForecast temp = dailyForecasts[0];
+                for (int i = 0; i < dailyForecasts.Count - 1; i++)
+                {
+                    for (int j = i + 1; j < dailyForecasts.Count; j++)
+                    {
+                        if (dailyForecasts[j].Day.Date < dailyForecasts[i].Day.Date)
+                        {
+                            temp = dailyForecasts[i];
+                            dailyForecasts[i] = dailyForecasts[j];
+                            dailyForecasts[j] = temp;
+                        }
+                    }
+                }
             }
         }
 
@@ -50,6 +71,7 @@ namespace Class_Library
             }
         }
 
+        CultureInfo culture = new CultureInfo("pt-BR");
         public void Remove(DateTime date)
         {
             int flag = 0;
@@ -61,11 +83,29 @@ namespace Class_Library
                     dailyForecasts.Remove(dailyForecasts[i]);
                     flag = 1;
                 }
-                if (flag == 0) throw new NoSuchDailyWeatherException($"No daily forecast for {dailyForecasts[i].Weather.ToString()}");
+                if (flag == 0) throw new NoSuchDailyWeatherException($"No daily forecast for {dailyForecasts[i].Day.ToString(culture)}");
             }
         }
 
+        // *******
+        public IEnumerator GetEnumerator()
+        {
+            foreach(DailyForecast dailyForecast in dailyForecasts)
+            {
+                yield return dailyForecast;
+            }
+        }
 
+        public override string ToString()
+        {
+            string temp = "";
+            for (int i = 0; i < dailyForecasts.Count; i++)
+            {
+                temp += dailyForecasts[i].ToString();
+                temp += "\n";
+            }
+            return temp;
+        }
 
     }
 }
