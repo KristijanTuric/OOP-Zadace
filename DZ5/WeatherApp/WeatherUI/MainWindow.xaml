@@ -25,8 +25,14 @@
                    HorizontalAlignment="Center"/>
         <TextBlock Grid.Row="1" Grid.Column="0" Text="Location:" FontSize="18" 
                    HorizontalAlignment="Right" VerticalAlignment="Center"/>
-        <TextBox Grid.Row="1" Grid.Column="1" Width="230" Margin="20" FontSize="18" />
-        <Button Grid.Row="1" Grid.Column="2" Content="Find" FontSize="20" Width="80" Height="40" HorizontalAlignment="Left"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Width="230" Margin="20" FontSize="18" Name="inputCity"/>
+        <Button Name="btn_Find" Grid.Row="1" ClickMode="Press"  Grid.Column="2" Content="Find" FontSize="20" Width="80" Height="40" 
+                HorizontalAlignment="Left" Click="btn_Find_Click"/>
+        <TextBlock Name="txtShow" Grid.Row="2" Grid.Column="0" Grid.RowSpan="4" TextWrapping="Wrap" 
+                   Grid.ColumnSpan="2" Text="" HorizontalAlignment="Center" VerticalAlignment="Center"
+                   FontSize="14"/>
+
+        <Image Name="imageWeather"  Grid.Column="2" Grid.Row="2"/>
 
     </Grid>
 </Window>

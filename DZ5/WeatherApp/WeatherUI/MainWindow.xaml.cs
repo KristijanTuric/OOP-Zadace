@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ClassLibrary;
 
 namespace WeatherUI
 {
@@ -23,6 +24,20 @@ namespace WeatherUI
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private async void btn_Find_Click(object sender, RoutedEventArgs e)
+        {
+            string city = inputCity.Text;
+            await WeatherAPI.GetWeather(city);
+            txtShow.Text = WeatherAPI.final;
+            var url = $"https://openweathermap.org/img/wn/{WeatherAPI.imgSc}@2x.png";
+            BitmapImage icon = new BitmapImage();
+            icon.BeginInit();
+            icon.UriSource = new Uri(url);
+            icon.EndInit();
+            imageWeather.Source = icon;
+
         }
     }
 }
